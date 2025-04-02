@@ -1,0 +1,24 @@
+{
+  "dependencies": {
+    "express": "^5.1.0",
+    "mongodb": "^6.15.0"
+  },
+  "name": "fullstack-lab1",
+  "version": "1.0.0",
+  "description": "Individual project in your Fullstack course, where you’ve worked with  Express and Mongodb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/marcusgostasson/fullstack-lab1.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/marcusgostasson/fullstack-lab1/issues"
+  },
+  "homepage": "https://github.com/marcusgostasson/fullstack-lab1#readme"
+}
