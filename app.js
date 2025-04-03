@@ -1,9 +1,17 @@
+import dotenv from 'dotenv';
 import express from 'express';
+import mongoose from 'mongoose';
 
-export const app = express();
-app.use(express.json());
-
+dotenv.config();
+const app = express();
 const router = express.Router();
+
+mongoose.connect(process.env.CONNECTION_URL)
+const db = mongoose.connection;
+db.on('error', (error) => console.error(error))
+db.once('open', () => {console.log('Connected to Database');});
+
+app.use(express.json());
 app.use('/', router);
 
 router.get('/api/dishes', async (req, res, next) => {
