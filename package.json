@@ -1,7 +1,6 @@
 {
   "dependencies": {
     "express": "^5.1.0",
-    "mongodb": "^6.15.0",
     "mongoose": "^8.13.1"
   },
   "name": "fullstack-lab1",
@@ -10,8 +9,8 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "node index.js",
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
