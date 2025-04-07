@@ -6,13 +6,15 @@ import { connectDB } from './src/config/dishConfig.js';
 // PORT and DATABASE_URI
 const PORT = process.env.PORT || 3000;
 
+// Create express and use json format
 const app = express();
 app.use(express.json());
 
-
+//Routes
 app.use('/api/dishes', dishesRouter);
 
-connectDB()
+// Connect to database
+connectDB();
 
 // Error handler 404
 app.use((req, res, next) => {
@@ -31,8 +33,7 @@ app.use((err, req, res, next) => {
   });
 });
 
+// Start server and listen to port
 app.listen(PORT, () => {
   console.log(`Server started at port: ${PORT}`);
 });
-
-
