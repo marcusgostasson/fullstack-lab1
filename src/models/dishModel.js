@@ -29,10 +29,6 @@ const dishSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-  spiceLevel: {
-    type: String,
-    required: true,
-  },
   servings: {
     type: Number,
     required: true,

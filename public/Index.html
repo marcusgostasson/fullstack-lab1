@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Dishes</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1>My Recipes</h1>
+
+    <table id="dish-table"></table>
+
+    <form action="/api/dishes" method="POST" id="dish-form">
+      <!-- Name -->
+      <label for="dish-name">Dish Name:</label>
+      <input type="text" id="dish-name" />
+
+      <!-- Ingredient -->
+      <label for="dish-ingredients">Ingredients:</label>
+      <div id="addIngredient">
+        <input id="dish-ingredients" < />
+      </div>
+      <button id="addIngredientButton">Add more Ingredients</button>
+
+      <!-- Preparation -->
+      <label for="dish-preparation">Preparation Steps:</label>
+      <div id="addSteps">
+        <input id="dish-preparation" < />
+      </div>
+      <button id="addStepsButton">Add more Steps</button>
+
+      <!-- Cooking-time -->
+      <label for="dish-cooking-time">Cooking Time: (min)</label>
+      <input type="text" id="dish-cooking-time" />
+
+      <!-- Origin -->
+      <label for="dish-origin">Origin:</label>
+      <input type="text" id="dish-origin" />
+
+      <!-- Difficulty -->
+      <label for="dish-difficulty">Difficulty:</label>
+      <select id="dish-difficulty">
+        <option value="easy">Easy</option>
+        <option value="medium">Medium</option>
+        <option value="hard">Hard</option>
+      </select>
+
+      <!-- Serving -->
+      <label for="dish-servings">Servings:</label>
+      <input type="number" id="dish-servings" />
+
+      <button type="submit">Save</button>
+    </form>
+  </body>
+  <script src="dish.js"></script>
+</html>

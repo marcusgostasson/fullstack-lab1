@@ -27,17 +27,21 @@ export const getDishByName = async (req, res) => {
 // POST dish
 export const postDish = async (req, res) => {
   try {
-    const { id, name, ingredients, preparationSteps,
-            cookingTime , origin, spiceLevel, servings} = req.body;
+    const { name, ingredients, preparationSteps,
+            cookingTime , origin, servings} = req.body;
 
-    // Control if the dish exist
     const existingDish = await Dish.findOne({ name });
     if (existingDish) {
       return res.status(409).json({ message: 'A dish with that name already exists' });
     }
 
-    // Create a new dish
+    const allDishes = await Dish.find().sort({ id: -1 });
+    const nextId = allDishes.length > 0 ? allDishes[0].id + 1 : 1;
+
+    req.body.id = nextId;
+
     const newDish = new Dish(req.body);
+    console.log(newDish)
     const savedDish = await newDish.save();
     res.status(201).json(savedDish);
   } catch (err) {
