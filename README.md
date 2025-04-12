@@ -113,6 +113,4 @@ Replace `yourDatabaseName` with the name of your database.
 Marcus Göstasson  
 Fullstack Development Student @ Kristianstad University
 
-GitHub: [https://github.com/marcusgostasson/fullstack-lab1](https://github.com/marcusgostasson/fullstack-lab1)
-
 ---
