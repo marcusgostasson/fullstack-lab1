@@ -1,17 +1,12 @@
 // Imports
 import mongoose from 'mongoose';
 
-
+// Schema
 const dishSchema = mongoose.Schema({
-  id: {
-    type: Number,
-    required: true,
-    unique: true,
-  },
   name: {
     type: String,
     required: true,
-    unique: true
+    unique: true,
   },
   ingredients: {
     type: [String],
@@ -29,13 +24,17 @@ const dishSchema = mongoose.Schema({
     type: String,
     required: true,
   },
+  difficulty: {
+    type: String,
+    required: true,
+  },
   servings: {
     type: Number,
     required: true,
-  }
+  },
 });
 
+// Model
 const Dish = mongoose.model('Dish', dishSchema);
 
 export default Dish;
-

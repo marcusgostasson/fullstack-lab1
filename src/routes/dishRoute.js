@@ -1,6 +1,12 @@
 // Imports
 import express from 'express';
-import { getAllDishes, getDishByName, postDish, putDishById, deleteDishById } from '../controllers/dishController.js';
+import {
+  getAllDishes,
+  getDishByName,
+  postDish,
+  putDishById,
+  deleteDishById,
+} from '../controllers/dishController.js';
 
 // Create express router
 const router = express.Router();

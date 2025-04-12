@@ -4,28 +4,106 @@ h1 {
 
 body {
   justify-items: center;
+  font-family: system-ui, -apple-system, 'Segoe UI', BlinkMacSystemFont, Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+#Container {
+  max-width: 90%;
+  text-align: center;
 }
 /* TABLE */
+
+#table-container {
+  border: 2px solid black;
+  border-radius: 10px;
+}
+
+#dish-table {
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+#dish-table tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+/* CELLS */
+
+.table-header-cell {
+  background-color: #2c3e50;
+  color: white;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 3px;
+}
+
+#row-cell {
+  border-collapse: collapse;
+}
+
+.name-cell {
+  font-weight: bold;
+  text-align: center;
+}
+
+.steps-cell {
+  text-align: center;
+}
+
+.ingredients-cell ol,
+.steps-cell ol {
+  padding-inline-start: 0;
+  padding-left: 0;
+  margin: 0 auto;
+  display: block;
+}
+
+.ingrediens-item,
+.step-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+.ingredients-cell span,
+.step-item span {
+  text-align: left;
+}
+
+.cookingTime_cell,
+.difficulty-cell,
+.actions-cell,
+.servings-cell,
+.origin-cell,
+.ingredients-cell {
+  text-align: center;
+}
+
+#submit-button {
+  margin-top: 26px;
+}
 
 /* FORM */
 
 #dish-form {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: fit-content;
-  gap: 10px;
-  border: 3px solid black;
-  padding: 50px;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
   border-radius: 10px;
+  border: 2px solid black;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
-#addIngredient {
-  display: flex;
-  flex-direction: column;
-  gap: 5px;
-}
-
+#addIngredient,
 #addSteps {
   display: flex;
   flex-direction: column;
@@ -35,4 +113,47 @@ body {
 label {
   font-size: large;
   font-weight: bold;
+}
+
+.button-group {
+  display: flex;
+  gap: 5px;
+}
+
+#dish-table td,
+#dish-table th {
+  padding: 15px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+/* MEDIA */
+
+@media (max-width: 1420px) {
+  #dish-form {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    justify-items: center;
+  }
+
+  #table-container {
+    overflow: scroll;
+  }
+}
+
+@media (max-width: 1000px) {
+  #dish-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #table-container {
+    overflow: scroll;
+  }
 }
